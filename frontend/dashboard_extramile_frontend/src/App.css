@@ -37,6 +37,66 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.welcomebar {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  height: 5em;
+  background: border-box;
+  box-shadow: 0em 0em 1em 1em rgba(122, 118, 118, 0.3);
+  align-items: center;
+  justify-content: center;
+  /* text-decoration: underline red wavy 5px; */
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2em;
+  background-image: var(--homebar);
+}
+
+@keyframes smiley {
+  0% {
+    transform: rotate3d(10, 10, 10, 0deg) translate3d(0, 0, 0) scale3d(3, 3, 3)
+      skew(0deg, 0deg);
+  }
+  25% {
+    transform: rotate3d(10, 10, 10, 90deg) translate3d(0, 50px, 0)
+      scale3d(3, 3, 3) skew(0deg, 10deg);
+  }
+  50% {
+    transform: rotate3d(10, 10, 10, 180deg) translate3d(0, 50px, 0)
+      scale3d(3, 3, 3) skew(20deg, 20deg);
+  }
+  75% {
+    transform: rotate3d(10, 10, 10, 270deg) translate3d(0, -50px, 0)
+      scale3d(3, 3, 3) skew(10deg, 10deg);
+  }
+  100% {
+    transform: rotate3d(10, 10, 10, 360deg) translate3d(0, -50px, 0)
+      scale3d(3, 3, 3) skew(0deg, 0deg);
+  }
+}
+
+.welcomebar > span {
+  padding: 1em;
+  animation-name: smiley;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.welcomebar > span:hover {
+  transform: rotate3d(10, 10, 10, 360deg) translate3d(100px, 100px, 0)
+    scale3d(3, 3, 3);
+}
+
+.themetoggle {
+  display: flex;
+  justify-content: right;
+  margin: 0em 0em 7em;
+}
+.mid {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 5em 8em 0em 5em;
 }

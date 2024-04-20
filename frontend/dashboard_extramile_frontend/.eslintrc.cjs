@@ -15,6 +15,15 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "flow"
+      }
+    ]
   },
+  
+    
+  
 }
