@@ -32,7 +32,7 @@ const LoginSchema = z.object({
 
 function Login() {
   const { toast } = useToast()
-  const navigate=useNavigate();
+  const navigate = useNavigate()
   const {
     handleSubmit: handleLoginSubmit,
     control: loginControl,
@@ -56,13 +56,12 @@ function Login() {
       //This are dummy password and username on role based
       if (data.emailOrUsername == 'Amit' && data.password == 'Amit@123')
         localStorage.setItem('role', 'emp')
-         
-       
+
       if (data.emailOrUsername == 'Akshay' && data.password == 'Akshay@123')
         localStorage.setItem('role', 'admin')
 
       navigate('/dashboard')
-      
+
       toast({
         title: 'SucessFully Done😎 ',
         description: (

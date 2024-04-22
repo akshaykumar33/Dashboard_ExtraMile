@@ -1,6 +1,5 @@
 export type PopoverDemoProps = {
   name: string
-  // eslint-disable-next-line prettier/prettier
   title: string
   taskname: string
   subtitle: string
