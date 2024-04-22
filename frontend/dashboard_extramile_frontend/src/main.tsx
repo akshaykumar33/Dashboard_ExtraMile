@@ -11,6 +11,7 @@ import DashBoard from '@/components/ui/pages/dashboard.tsx'
 import { Toaster } from '@/components/ui/toaster'
 import { PanelBoard } from '@/components/ui/pages/panelboard.tsx'
 import { PerformanceParticipate } from '@/components/ui/pages/performance-participate.tsx'
+import Test from '@/components/ui/pages/test.tsx';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: '/forgot',
         element: <InputOTPForm />
+      },
+      {
+        path:'/test',
+        element:<Test />
       }
     ]
   }

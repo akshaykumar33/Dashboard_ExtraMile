@@ -102,7 +102,7 @@ export const PerformanceParticipate: React.FC = () => {
           <FormField
             control={form.control}
             name='currentemp'
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             //@ts-ignore
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             render={({ field }) => (

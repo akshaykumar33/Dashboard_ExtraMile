@@ -1,15 +1,2 @@
 node_modules/
 dist/**/*.js
-.prettierignore
-.prettierrc
-index.html
-package.json
-package-lock.json
-postcss.config.js
-tailwind.config.js
-tsconfig.json
-tsconfig.node.json
-vite.config.ts
-.env
-src/vite-env.d.ts
-components.json
