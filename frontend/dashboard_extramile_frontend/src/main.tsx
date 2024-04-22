@@ -1,70 +1,44 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { ThemeProvider } from '@/themes/theme-provider.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { LoginAndRegistrationForm } from '@/components/ui/pages/login-and-registeration-form.tsx'
-import { InputOTPForm } from '@/components/ui/pages/input-otp-form.tsx'
-import { ToogleMenu } from '@/components/ui/pages/toogle-menu.tsx'
-import DashBoard from '@/components/ui/pages/dashboard.tsx'
-import { Toaster } from '@/components/ui/toaster'
-import { PanelBoard } from '@/components/ui/pages/panelboard.tsx'
-import { PerformanceParticipate } from '@/components/ui/pages/performance-participate.tsx'
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable prettier/prettier */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.tsx';
+import './index.css';
+import { ThemeProvider } from '@/themes/theme-provider.tsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LoginAndRegistrationForm } from '@/components/ui/pages/login-and-registeration-form.tsx';
+import { InputOTPForm } from '@/components/ui/pages/input-otp-form.tsx';
+import { ToogleMenu } from '@/components/ui/pages/toogle-menu.tsx';
+import DashBoard from '@/components/ui/pages/dashboard.tsx';
+import { Toaster } from '@/components/ui/toaster';
+import { PanelBoard } from '@/components/ui/pages/panelboard.tsx';
+import { PerformanceParticipate } from '@/components/ui/pages/performance-participate.tsx';
 import Test from '@/components/ui/pages/test.tsx';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <ToogleMenu />,
-    children: [
-      {
-        path: '',
-        element: <App />
-      },
-      {
-        path: 'otp',
-        element: <InputOTPForm />
-      },
-      {
-        path: 'form/register',
-        element: <LoginAndRegistrationForm />
-      },
-      {
-        path: 'form/login',
-        element: <LoginAndRegistrationForm />
-      },
-      {
-        path: 'dashboard',
-        element: <DashBoard />
-      },
-      {
-        path: '/employee/:id',
-        element: <PanelBoard />
-      },
-      {
-        path: '/performance/:id',
-        element: <PerformanceParticipate />
-      },
+const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<ToogleMenu />}>
+      <Route path="" element={<App />} />
+      <Route path="otp" element={<InputOTPForm />} />
+      <Route path="form/register" element={<LoginAndRegistrationForm />} />
+      <Route path="form/login" element={<LoginAndRegistrationForm />} />
+      <Route path="dashboard" element={<DashBoard />} />
+      <Route path="/employee/:id" element={<PanelBoard />} />
+      <Route path="/performance/:id" element={<PerformanceParticipate />} />
+      <Route path="/forgot" element={<InputOTPForm />} />
+      <Route path="/test" element={<Test />} />
+    </Route>
+  </Routes>
+);
 
-      {
-        path: '/forgot',
-        element: <InputOTPForm />
-      },
-      {
-        path:'/test',
-        element:<Test />
-      }
-    ]
-  }
-])
-
-// eslint-disable-next-line prettier/prettier
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-      <RouterProvider router={router} />
-      <Toaster />
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Router>
+        <AppRoutes />
+        <Toaster />
+      </Router>
     </ThemeProvider>
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+  document.getElementById('root')
+);
