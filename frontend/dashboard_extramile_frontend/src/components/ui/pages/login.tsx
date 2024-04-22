@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ToastAction } from '@/components/ui/toast'
 import { useToast } from '@/components/ui/use-toast'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // Define schema for login form
 const LoginSchema = z.object({
@@ -32,7 +32,7 @@ const LoginSchema = z.object({
 
 function Login() {
   const { toast } = useToast()
-
+  const navigate=useNavigate();
   const {
     handleSubmit: handleLoginSubmit,
     control: loginControl,
@@ -53,6 +53,16 @@ function Login() {
       console.log('inside submit')
       // Initiate login process
       // Implement login logic
+      //This are dummy password and username on role based
+      if (data.emailOrUsername == 'Amit' && data.password == 'Amit@123')
+        localStorage.setItem('role', 'emp')
+         
+       
+      if (data.emailOrUsername == 'Akshay' && data.password == 'Akshay@123')
+        localStorage.setItem('role', 'admin')
+
+      navigate('/dashboard')
+      
       toast({
         title: 'SucessFully Done😎 ',
         description: (

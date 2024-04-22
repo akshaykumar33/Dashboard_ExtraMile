@@ -9,8 +9,7 @@ function App() {
     <>
       <div className='card'>
         <div
-          className={`${theme === 'light' ? 'glow' : 'dark glow'} welcomebar`}
-        >
+          className={`${theme === 'light' ? 'glow' : 'dark glow'} welcomebar`}>
           Welcome to Homepage of ExtraMile <span>😊</span>
         </div>
 
