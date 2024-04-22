@@ -7,7 +7,7 @@ import {
   // DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger
 } from '@/components/ui/dialog'
 import { DialogDemoProps } from '@/types/pages'
 import TaskForm from '@/components/ui/pages/task-form'
@@ -19,7 +19,7 @@ const DialogDemo: React.FC<DialogDemoProps> = ({
   categoryLabel,
   descriptionLabel,
   onUpdate,
-  handleId,
+  handleId
 }) => {
   return (
     <Dialog>

@@ -7,7 +7,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -18,7 +18,7 @@ import { TaskProps } from '@/types/pages'
 const taskSchema = z.object({
   category: z.string(),
   description: z.string(),
-  taskname: z.string(),
+  taskname: z.string()
 })
 
 function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
@@ -27,13 +27,13 @@ function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm<z.infer<typeof taskSchema>>({
-    resolver: zodResolver(taskSchema),
+    resolver: zodResolver(taskSchema)
   })
 
   const taskForm = useForm<z.infer<typeof taskSchema>>({
-    resolver: zodResolver(taskSchema),
+    resolver: zodResolver(taskSchema)
   })
 
   // eslint-disable-next-line prettier/prettier
@@ -49,7 +49,7 @@ function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
             <code className='text-white'>Task Successfully Submitted👍</code>
           </pre>
         ),
-        action: <ToastAction altText='Try again'>Try again</ToastAction>,
+        action: <ToastAction altText='Try again'>Try again</ToastAction>
       })
     } catch (error) {
       if (error instanceof ZodError) {
@@ -62,7 +62,7 @@ function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
               <code className='text-white'>Validation failed</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       } else {
         console.error('Unexpected error:', error)
@@ -74,7 +74,7 @@ function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
               <code className='text-white'>An unexpected error occurred</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       }
     }

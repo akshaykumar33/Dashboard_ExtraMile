@@ -13,13 +13,13 @@ export const PanelBoard: React.FC = () => {
     {
       id: '12',
       name: 'motors',
-      category: 'super wheel',
+      category: 'super wheel'
     },
     {
       id: '123',
       name: 'medical',
-      category: 'medicinal',
-    },
+      category: 'medicinal'
+    }
   ]
 
   const handleId = (id: string) => {

@@ -8,14 +8,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components/ui/form'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -30,12 +30,12 @@ const RegistrationSchema = z
     password: z.string().min(6),
     confirmPassword: z.string().min(6),
     username: z.string().min(2, {
-      message: 'Username must be at least 2 characters.',
-    }),
+      message: 'Username must be at least 2 characters.'
+    })
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords don't match",
-    path: ['confirmPassword'],
+    path: ['confirmPassword']
   })
 
 function Registeration() {
@@ -44,13 +44,13 @@ function Registeration() {
   const {
     handleSubmit: handleRegisterSubmit,
     control: registerControl,
-    formState: { errors: registerErrors },
+    formState: { errors: registerErrors }
   } = useForm<z.infer<typeof RegistrationSchema>>({
-    resolver: zodResolver(RegistrationSchema),
+    resolver: zodResolver(RegistrationSchema)
   })
 
   const registerForm = useForm<z.infer<typeof RegistrationSchema>>({
-    resolver: zodResolver(RegistrationSchema),
+    resolver: zodResolver(RegistrationSchema)
   })
 
   // eslint-disable-next-line prettier/prettier
@@ -69,7 +69,7 @@ function Registeration() {
             <code className='text-white'>Registration Successful👍</code>
           </pre>
         ),
-        action: <ToastAction altText='Try again'>Try again</ToastAction>,
+        action: <ToastAction altText='Try again'>Try again</ToastAction>
       })
     } catch (error) {
       if (error instanceof ZodError) {
@@ -83,7 +83,7 @@ function Registeration() {
               <code className='text-white'>Validation failed</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       } else {
         // Handle unexpected errors
@@ -96,7 +96,7 @@ function Registeration() {
               <code className='text-white'>An unexpected error occurred</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       }
     }

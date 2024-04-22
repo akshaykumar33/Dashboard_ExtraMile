@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import {
   AddTask,
   StripCardProps,
-  StripCardsContainerProps,
+  StripCardsContainerProps
 } from '@/types/pages'
 import DialogDemo from '@/components/ui/pages/edit'
 import { AlertDialogDemo } from '@/components/ui/pages/delete'
@@ -13,7 +13,7 @@ const StripCard: React.FC<StripCardProps> = ({
   content,
   onDelete,
   onUpdate,
-  handleId,
+  handleId
 }) => {
   return (
     <Card>
@@ -40,7 +40,7 @@ const StripCard: React.FC<StripCardProps> = ({
 }
 
 const StripCardsContainer: React.FC<StripCardsContainerProps> = ({
-  strips,
+  strips
 }) => {
   const [ids, setIds] = useState<string | unknown>(null)
 

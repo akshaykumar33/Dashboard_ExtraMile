@@ -55,7 +55,7 @@ export interface DialogDemoProps extends DialogProps {
 }
 
 export interface Employee {
-  id: unknown | string
+  id: string
   email: string
   name: string
 }
@@ -67,7 +67,7 @@ export interface EmployeeTableProps {
 }
 
 export interface PerformanceItem {
-  id: unknown | string
+  id: string
   email: string
   category: string
 }

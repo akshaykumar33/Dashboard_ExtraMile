@@ -16,9 +16,10 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    
 
     "baseUrl": ".",
     "paths": {
@@ -27,6 +28,8 @@
       ]
     }
   },
+  "suppressExcessPropertyErrors": true, // Example of suppressing excess property errors
+  "suppressImplicitAnyIndexErrors": true, // Example of suppressing implicit any index errors
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

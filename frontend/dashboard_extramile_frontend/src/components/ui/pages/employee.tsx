@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
   HoverCard,
   HoverCardContent,
-  HoverCardTrigger,
+  HoverCardTrigger
 } from '@/components/ui/hover-card'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from '@/components/ui/carousel'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -26,7 +26,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components/ui/form'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Textarea } from '@/components/ui/textarea'
@@ -38,18 +38,18 @@ const FormSchema = z.object({
   review: z
     .string()
     .min(10, {
-      message: 'Review must be at least 10 characters.',
+      message: 'Review must be at least 10 characters.'
     })
     .max(160, {
-      message: 'Review must not be longer than 30 characters.',
-    }),
+      message: 'Review must not be longer than 30 characters.'
+    })
 })
 
 function Employee() {
   const username = localStorage.getItem('uname')
   const initials = username ? username.substring(0, 2).toUpperCase() : 'AK'
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({ delay: 2000, stopOnInteraction: true })
   )
 
   const [submittedForms, setSubmittedForms] = React.useState<number[]>([]) // Track submitted form indices
@@ -68,7 +68,7 @@ function Employee() {
           <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
             <code className='text-white'>{JSON.stringify(data, null, 2)}</code>
           </pre>
-        ),
+        )
       })
       // Update submitted forms state
       setSubmittedForms([...submittedForms, index])
@@ -133,7 +133,7 @@ function Employee() {
                         </Card>
                       </div>
                     </CarouselItem>
-                  ),
+                  )
               )}
             </CarouselContent>
             <CarouselPrevious />
@@ -154,7 +154,7 @@ function Employee() {
               <StripCardsContainer
                 strips={[
                   { content: 'abc', title: 'motor', id: '1' },
-                  { content: 'xyz', title: 'medical', id: '2' },
+                  { content: 'xyz', title: 'medical', id: '2' }
                 ]}
               />
             </CardContent>
@@ -172,7 +172,7 @@ interface EmployeeFormProps {
 
 function EmployeeForm({ index, onSubmit }: EmployeeFormProps) {
   const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+    resolver: zodResolver(FormSchema)
   })
 
   return (

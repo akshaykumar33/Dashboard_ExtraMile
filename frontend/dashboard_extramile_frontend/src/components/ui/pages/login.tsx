@@ -7,14 +7,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components/ui/form'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -26,8 +26,8 @@ import { Link } from 'react-router-dom'
 const LoginSchema = z.object({
   emailOrUsername: z.string(),
   password: z.string().min(6, {
-    message: 'Password must be at least 6 characters.',
-  }),
+    message: 'Password must be at least 6 characters.'
+  })
 })
 
 function Login() {
@@ -36,13 +36,13 @@ function Login() {
   const {
     handleSubmit: handleLoginSubmit,
     control: loginControl,
-    formState: { errors: loginErrors },
+    formState: { errors: loginErrors }
   } = useForm<z.infer<typeof LoginSchema>>({
-    resolver: zodResolver(LoginSchema),
+    resolver: zodResolver(LoginSchema)
   })
 
   const loginForm = useForm<z.infer<typeof LoginSchema>>({
-    resolver: zodResolver(LoginSchema),
+    resolver: zodResolver(LoginSchema)
   })
 
   // eslint-disable-next-line prettier/prettier
@@ -60,7 +60,7 @@ function Login() {
             <code className='text-white'>Login Successful 👍</code>
           </pre>
         ),
-        action: <ToastAction altText='Try again'>Try again</ToastAction>,
+        action: <ToastAction altText='Try again'>Try again</ToastAction>
       })
     } catch (error) {
       if (error instanceof ZodError) {
@@ -74,7 +74,7 @@ function Login() {
               <code className='text-white'>Validation failed</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       } else {
         // Handle unexpected errors
@@ -87,7 +87,7 @@ function Login() {
               <code className='text-white'>An unexpected error occurred</code>
             </pre>
           ),
-          action: <ToastAction altText='Try again'>Try again</ToastAction>,
+          action: <ToastAction altText='Try again'>Try again</ToastAction>
         })
       }
     }
@@ -132,7 +132,7 @@ function Login() {
                       <div className='flex items-center'>
                         <FormLabel>Password</FormLabel>
                         <Link
-                          to='/'
+                          to='/forgot'
                           className='ml-auto inline-block text-sm underline'
                         >
                           Forgot your password?

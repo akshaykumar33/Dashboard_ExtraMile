@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
   HoverCard,
   HoverCardContent,
-  HoverCardTrigger,
+  HoverCardTrigger
 } from '@/components/ui/hover-card'
 import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
@@ -57,13 +57,13 @@ const Admin: React.FC = () => {
           {
             email: 'abc@mail.com',
             name: 'abc',
-            id: '1',
+            id: '1'
           },
           {
             email: 'xyz@mail.com',
             name: 'xyz',
-            id: '2',
-          },
+            id: '2'
+          }
         ]}
         onDelete={onDelete}
         onUpdate={onUpdate}

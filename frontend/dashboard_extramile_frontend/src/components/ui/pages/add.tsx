@@ -1,20 +1,21 @@
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger
 } from '@/components/ui/popover'
 
 import { PopoverDemoProps } from '@/types/pages'
 import TaskForm from '@/components/ui/pages/task-form'
 import { Button } from '@/components/ui/button'
 import { AddTask } from '@/types/pages'
+
 const PopoverDemo: React.FC<PopoverDemoProps> = ({
   name,
   title,
   taskname,
   subtitle,
   categoryLabel,
-  descriptionLabel,
+  descriptionLabel
 }) => {
   const onAdd = async (data: AddTask | unknown) => {
     console.log('Add', data)

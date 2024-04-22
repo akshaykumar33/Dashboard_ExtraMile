@@ -19,34 +19,39 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <App />,
+        element: <App />
       },
       {
         path: 'otp',
-        element: <InputOTPForm />,
+        element: <InputOTPForm />
       },
       {
         path: 'form/register',
-        element: <LoginAndRegistrationForm />,
+        element: <LoginAndRegistrationForm />
       },
       {
         path: 'form/login',
-        element: <LoginAndRegistrationForm />,
+        element: <LoginAndRegistrationForm />
       },
       {
         path: 'dashboard',
-        element: <DashBoard />,
+        element: <DashBoard />
       },
       {
         path: '/employee/:id',
-        element: <PanelBoard />,
+        element: <PanelBoard />
       },
       {
         path: '/performance/:id',
-        element: <PerformanceParticipate />,
+        element: <PerformanceParticipate />
       },
-    ],
-  },
+
+      {
+        path: '/forgot',
+        element: <InputOTPForm />
+      }
+    ]
+  }
 ])
 
 // eslint-disable-next-line prettier/prettier
@@ -56,5 +61,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <RouterProvider router={router} />
       <Toaster />
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
