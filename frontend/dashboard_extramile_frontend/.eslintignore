@@ -12,6 +12,4 @@ tsconfig.node.json
 vite.config.ts
 .env
 src/vite-env.d.ts
-src/components/*
-src/lib/*
 components.json

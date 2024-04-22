@@ -136,6 +136,9 @@
     @apply text-center text-white text-xl;
     animation: neon-glow-light 1s ease-in-out infinite alternate; /* Default to light theme */
   }
+  .card-shadow {
+    box-shadow: 0em 0em 1em 1em rgba(122, 118, 118, 0.3);
+  }
 }
 
 @layer utilities {

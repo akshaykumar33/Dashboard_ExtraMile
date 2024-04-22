@@ -40,7 +40,8 @@
 .welcomebar {
   display: flex;
   font-family: 'Inter', sans-serif;
-  height: 5em;
+  height: 10em;
+  border-radius: 1em;
   background: border-box;
   box-shadow: 0em 0em 1em 1em rgba(122, 118, 118, 0.3);
   align-items: center;
@@ -48,7 +49,6 @@
   /* text-decoration: underline red wavy 5px; */
   text-transform: uppercase;
   font-weight: bolder;
-  font-size: 2em;
   background-image: var(--homebar);
 }
 
@@ -80,6 +80,7 @@
   animation-name: smiley;
   animation-duration: 5s;
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  font-size: 2em;
 }
 
 .welcomebar > span:hover {
@@ -89,8 +90,9 @@
 
 .themetoggle {
   display: flex;
-  justify-content: right;
-  margin: 0em 0em 7em;
+  flex-direction: column;
+  gap: 1em;
+  /* margin: 0em 0em 7em; */
 }
 .mid {
   display: flex;
@@ -98,5 +100,13 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 5em 8em 0em 5em;
+  margin: 5em 10em 0em 8em;
+}
+
+form {
+  background-image: var(--homebar);
+  box-shadow: 0em 0em 1em 1em rgba(122, 118, 118, 0.3);
+  padding: 2em;
+
+  border-radius: 2em;
 }
