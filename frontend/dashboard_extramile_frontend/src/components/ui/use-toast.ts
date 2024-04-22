@@ -8,7 +8,6 @@ const TOAST_REMOVE_DELAY = 1000000
 
 type ToasterToast = ToastProps & {
   id: string
-  // eslint-disable-next-line prettier/prettier
   title?: React.ReactNode
   description?: React.ReactNode
   action?: ToastActionElement

@@ -36,7 +36,7 @@ function TaskForm({ name, categoryLabel, descriptionLabel, click }: TaskProps) {
     resolver: zodResolver(taskSchema)
   })
 
-  // eslint-disable-next-line prettier/prettier
+ 
   const onTaskSubmit = async (data: z.infer<typeof taskSchema>) => {
     try {
       taskSchema.parse(data)

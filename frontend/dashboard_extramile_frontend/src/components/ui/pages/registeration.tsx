@@ -53,7 +53,7 @@ function Registeration() {
     resolver: zodResolver(RegistrationSchema)
   })
 
-  // eslint-disable-next-line prettier/prettier
+
   const onRegisterSubmit = async (data: z.infer<typeof RegistrationSchema>) => {
     try {
       // Validate form data

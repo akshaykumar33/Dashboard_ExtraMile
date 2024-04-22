@@ -8,9 +8,6 @@ import { AlertDialogDemo } from '@/components/ui/pages/delete'
 
 const EmployeeTable: React.FC<EmployeeTableProps> = ({
   employees,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onUpdate,
   onDelete
 }) => {

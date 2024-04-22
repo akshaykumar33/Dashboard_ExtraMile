@@ -6,6 +6,7 @@ import DialogDemo from '@/components/ui/pages/edit'
 import PopoverDemo from '@/components/ui/pages/add'
 
 export const PanelBoard: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { id } = useParams()
   const [ids, setIds] = useState<string | unknown>(null)
 

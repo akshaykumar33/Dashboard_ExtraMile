@@ -33,7 +33,7 @@ export function InputOTPForm() {
     }
   })
 
-  // eslint-disable-next-line prettier/prettier
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
       title: 'You submitted the following values:',

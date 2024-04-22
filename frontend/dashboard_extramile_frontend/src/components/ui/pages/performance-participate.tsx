@@ -25,7 +25,6 @@ import { toast } from '@/components/ui/use-toast'
 
 interface Employee {
   id: string | unknown
-  // eslint-disable-next-line prettier/prettier
   name: string
 }
 

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/themes/theme-provider'
-import './App.css'
+import '@/App.css'
 import { Link } from 'react-router-dom'
 
 function App() {

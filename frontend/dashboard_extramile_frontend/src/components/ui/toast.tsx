@@ -115,7 +115,6 @@ type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>
 type ToastActionElement = React.ReactElement<typeof ToastAction>
 
 export {
-  // eslint-disable-next-line prettier/prettier
   type ToastProps,
   type ToastActionElement,
   ToastProvider,

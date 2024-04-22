@@ -4,7 +4,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  // DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger
@@ -44,9 +43,7 @@ const DialogDemo: React.FC<DialogDemoProps> = ({
             descriptionLabel={descriptionLabel}
           />
         </div>
-        {/* <DialogFooter>
-          <Button type='submit'>Save changes</Button>
-        </DialogFooter> */}
+        
       </DialogContent>
     </Dialog>
   )

@@ -45,7 +45,7 @@ function Login() {
     resolver: zodResolver(LoginSchema)
   })
 
-  // eslint-disable-next-line prettier/prettier
+ 
   const onLoginSubmit = async (data: z.infer<typeof LoginSchema>) => {
     try {
       // Validate form data
@@ -54,10 +54,10 @@ function Login() {
       // Initiate login process
       // Implement login logic
       //This are dummy password and username on role based
-      if (data.emailOrUsername == 'Amit' && data.password == 'Amit@123')
+      if (data.emailOrUsername === 'Amit' && data.password === 'Amit@123')
         localStorage.setItem('role', 'emp')
 
-      if (data.emailOrUsername == 'Akshay' && data.password == 'Akshay@123')
+      if (data.emailOrUsername === 'Akshay' && data.password === 'Akshay@123')
         localStorage.setItem('role', 'admin')
 
       navigate('/dashboard')

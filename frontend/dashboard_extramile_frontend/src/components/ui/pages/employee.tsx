@@ -60,7 +60,7 @@ function Employee() {
   // Function to handle form submission
 
   const handleFormSubmit =
-    // eslint-disable-next-line prettier/prettier
+ 
     (index: number) => (data: z.infer<typeof FormSchema>) => {
       toast({
         title: 'You submitted the following values:',
